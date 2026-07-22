@@ -30,28 +30,40 @@ const Navbar = () => {
   }, [])
   return (
     <div>
-      <header className='fixed top-5 left-1/2 z-50 w-[95%] max-w-7xl -translate-x-1/2'>
+      <header className='fixed top-5 left-1/2 z-50 w-[80%] max-w-7xl -translate-x-1/2'>
         <nav className={`flex h-20 items-center justify-between rounded-2xl border border-white/10 px-6 lg:px-8 transition-all duration-300 ${scrolled ? "bg-[#070B14]/80 backdrop-blur-xl shadow-lg shadow-cyan-500/10" : "bg-transparent"}`}>
 
-          <a href="#" className={"group flex items-center gap-2.5 sm:gap-3"}>
+          <div className="group relative cursor-pointer font-mono text-base font-bold tracking-tight transition-all duration-300 sm:text-lg md:text-xl">
+            {/* Glow effect on hover */}
+            <div className="absolute -inset-x-3 -inset-y-2 rounded-lg bg-[#82456c]/10 opacity-0 blur-md transition-opacity duration-300 group-hover:opacity-100"></div>
 
-            <div className="relative flex h-9 w-9 sm:h-11 sm:w-11 shrink-0 items-center justify-center rounded-xl bg-linear-to-br from-cyan-500/20 via-purple-500/20 to-transparent p-px shadow-lg shadow-cyan-500/10 transition-all duration-300 group-hover:shadow-cyan-500/30">
-              <div className="flex h-full w-full items-center justify-center rounded-xl bg-[#070B14] transition-colors duration-300 group-hover:bg-linear-to-br group-hover:from-cyan-500 group-hover:to-purple-600">
-                <span className="text-xs sm:text-sm font-extrabold tracking-wider text-cyan-400 transition-colors duration-300 group-hover:text-white">
-                  NS
-                </span>
-              </div>
-            </div>
+            <div className="relative flex items-center gap-0.5 sm:gap-1">
+              {/* Opening bracket */}
+              <span className="text-[#82456c] transition-transform duration-300 group-hover:-translate-x-0.5">
+                &lt;
+              </span>
 
-            <div className="flex flex-col">
-              <h1 className="text-[17px] font-bold tracking-tight text-white transition-colors duration-300 group-hover:text-gray-100 sm:text-[20px] md:text-[24px] leading-tight">
-                Nitin <span className="bg-linear-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Singh</span>
-              </h1>
-              <span className="hidden sm:block text-[9px] md:text-[10px] font-medium tracking-widest text-gray-400 uppercase">
-                Full Stack Developer
+              {/* First Name */}
+              <span className="text-white transition-colors duration-300 group-hover:text-gray-100">
+                Nitin
+              </span>
+
+              {/* Slash */}
+              <span className="text-[#82456c] px-0.5 transition-transform duration-300 group-hover:scale-110">
+                /
+              </span>
+
+              {/* Last Name */}
+              <span className="bg-linear-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent transition-all duration-300">
+                Singh
+              </span>
+
+              {/* Closing bracket */}
+              <span className="text-[#82456c] transition-transform duration-300 group-hover:translate-x-0.5">
+                &gt;
               </span>
             </div>
-          </a>
+          </div>
 
           {/* Menus */}
           <ul className={`absolute top-20 left-0 right-0 mx-4 rounded-2xl border border-white/10 bg-[#070B14]/50 backdrop-blur-2xl shadow-[0_0_30px_rgba(34,211,238,0.08)] py-8 transition-all duration-300 ${sidebarOpen ? "flex flex-col items-center gap-8" : "hidden"} lg:static lg:flex lg:flex-row lg:items-center lg:gap-10 lg:w-auto lg:bg-transparent lg:backdrop-blur-none
@@ -94,13 +106,6 @@ const Navbar = () => {
               rel="noopener noreferrer"
               className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-300 backdrop-blur-xl transition duration-300 hover:border-cyan-400 hover:bg-cyan-500/10 hover:text-cyan-400">
               <i className="fa-brands fa-linkedin-in"></i>
-            </a>
-
-            {/* Contact Button */}
-            <a href="#Contact"
-              onClick={() => handleLinkClick('#Contact')}
-              className="rounded-xl bg-linear-to-r from-cyan-500 to-purple-600 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-purple-500/20 transition duration-300 hover:-translate-y-1 hover:shadow-purple-500/40">
-              Contact Me
             </a>
           </div>
 
