@@ -30,14 +30,14 @@ const Navbar = () => {
   }, [])
   return (
     <div>
-      <header className='fixed top-5 left-1/2 z-50 w-[80%] max-w-7xl -translate-x-1/2'>
-        <nav className={`flex h-20 items-center justify-between rounded-2xl border border-white/10 px-6 lg:px-8 transition-all duration-300 ${scrolled ? "bg-[#070B14]/80 backdrop-blur-xl shadow-lg shadow-cyan-500/10" : "bg-transparent"}`}>
+      <header className='fixed top-5 inset-x-4 z-50 max-w-7xl mx-auto'>
+        <nav className={`flex h-20 items-center justify-between rounded-2xl border border-white/10 px-4 sm:px-6 lg:px-8 transition-all duration-300 ${scrolled ? "bg-[#070B14]/80 backdrop-blur-xl shadow-lg shadow-cyan-500/10" : "bg-transparent"}`}>
 
-          <div className="group relative cursor-pointer font-mono text-base font-bold tracking-tight transition-all duration-300 sm:text-lg md:text-xl">
+          <div className="group relative cursor-pointer whitespace-nowra font-mono text-base font-bold tracking-tight transition-all duration-300 sm:text-lg md:text-xl">
             {/* Glow effect on hover */}
             <div className="absolute -inset-x-3 -inset-y-2 rounded-lg bg-[#82456c]/10 opacity-0 blur-md transition-opacity duration-300 group-hover:opacity-100"></div>
 
-            <div className="relative flex items-center gap-0.5 sm:gap-1">
+            <div className="relative flex items-center gap-0.5 sm:gap-1 whitespace-nowra">
 
               <span className="text-[#82456c] transition-transform duration-300 group-hover:-translate-x-0.5">
                 &lt;
