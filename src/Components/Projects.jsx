@@ -4,6 +4,33 @@ import project2 from "../assets/Images/project-img2.png"
 import project3 from "../assets/Images/project-img3.png"
 
 const Projects = () => {
+
+  const projectsData = [
+    {
+      title: 'Student Management System',
+      description: 'A complete system to manage students, courses, and records efficiently.',
+      tags: ['HTML', 'Tailwind', 'Django', 'Python', 'MySQL'],
+      github: 'https://github.com/Nitin0259/Student-Management-System',
+      demo: 'https://student-management-system-8mzt.onrender.com',
+      image: project1,
+    },
+    {
+      title: 'Agency AI',
+      description: 'A full stack food delivery website with cart, payment and order tracking.',
+      tags: ['React', 'Tailwind', 'Framer Motion'],
+      github: 'https://github.com',
+      demo: 'https://example.com',
+      image: project2,
+    },
+    {
+      title: 'Travel Booking Website',
+      description: 'Personal portfolio website to showcase projects and skills.',
+      tags: ['HTML', 'Tailwind', 'Javascript'],
+      github: 'https://github.com',
+      demo: 'https://example.com',
+      image: project3,
+    },
+  ]
   return (
     <section id='Projects' className='min-h-screen py-16 px-4 bg-[#070B14] text-white sm:px-6 lg:px-10'>
       <div className="text-center mb-10">
