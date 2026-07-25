@@ -7,13 +7,13 @@ const About = () => {
   return (
     <section
       id="About"
-      className="min-h-screen py-16 px-5 bg-[#070B14] text-white sm:px-6 lg:px-10"
+      className="min-h-screen py-18 px-5 bg-[#070B14] text-white sm:px-6 lg:px-10"
     >
       <div className="text-center mb-10">
-        <h2 className="text-xxl sm:text-2xl lg:text-3xl font-extrabold tracking-normal">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl uppercase font-extrabold tracking-normal">
           About Me
         </h2>
-        <div className="mt-2 h-1 w-14 mx-auto rounded-full bg-linear-to-r from-cyan-400 to-purple-500"></div>
+        <div className="mt-3 h-1 w-14 mx-auto rounded-full bg-linear-to-r from-cyan-400 to-purple-500"></div>
       </div>
 
       <div className="max-w-7xl mx-auto">

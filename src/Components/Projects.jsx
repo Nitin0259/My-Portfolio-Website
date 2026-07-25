@@ -16,49 +16,88 @@ const Projects = () => {
     },
     {
       title: 'Agency AI',
-      description: 'A full stack food delivery website with cart, payment and order tracking.',
+      description: 'A responsive AI agency website featuring modern design, smooth animations, and service showcases.',
       tags: ['React', 'Tailwind', 'Framer Motion'],
-      github: 'https://github.com',
-      demo: 'https://example.com',
+      github: ' https://github.com/Nitin0259/Agency-AI-Project',
+      demo: 'https://nitin0259.github.io/Agency-AI-Project/',
       image: project2,
     },
     {
       title: 'Travel Booking Website',
-      description: 'Personal portfolio website to showcase projects and skills.',
+      description: 'A modern travel booking platform with destination browsing, trip planning, and secure booking features.',
       tags: ['HTML', 'Tailwind', 'Javascript'],
-      github: 'https://github.com',
-      demo: 'https://example.com',
+      github: 'https://github.com/Nitin0259/Travel-Booking-website',
+      demo: 'https://nitin0259.github.io/Travel-Booking-website/',
       image: project3,
     },
   ]
   return (
-    <section id='Projects' className='min-h-screen py-16 px-4 bg-[#070B14] text-white sm:px-6 lg:px-10'>
+    <section id='Projects' className='min-h-screen py-18 px-5 bg-[#070B14] text-white sm:px-6 lg:px-10'>
       <div className="text-center mb-10">
-        <h2 className="text-xxl sm:text-2xl lg:text-3xl font-extrabold tracking-normal">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl uppercase font-extrabold tracking-normal">
           My Projects
         </h2>
         <div className="mt-3 h-1 w-14 mx-auto rounded-full bg-linear-to-r from-cyan-400 to-purple-500"></div>
-        <h3 className='mt-4 text-md sm:text-base font-medium text-gray-400'>A showcase of the projects I have worked on, highlighting my skills and experience in various technologies</h3>
+        <p className='mt-4 text-lg  font-semibold text-gray-400'>A showcase of the projects I have worked on, highlighting my skills and experience in various technologies</p>
       </div>
 
-      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
-        <div className='group rounded-xl border border-white/10 bg-white/4 backdrop-blur-xl p-4 transition-all duration-300 hover:-translate-y-3'>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
 
-          <div className='rounded-xl bg-white/4'>
-          <img src={project1} alt="student management" className='rounded-xl h-62 sm:h-68 lg:h-64'/>
+        {projectsData.map((project, index) => (
+          <div
+            key={index}
+            className='flex flex-col justify-between p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-cyan-500/40 transition-all duration-300 group shadow-xl backdrop-blur-md'>
+
+            <div>
+              <div className='relative w-full h-68 rounded-xl overflow-hidden mb-5 bg-[#070B14] border border-white/10'>
+                <img src={project.image} alt={project.title} className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-500' />
+              </div>
+
+
+              <h3 className='text-lg sm:text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
+                {project.title}
+              </h3>
+              <p className='text-gray-400 text-xs sm:text-sm leading-relaxed mb-6'>{project.description}</p>
+            </div>
+
+            <div>
+              <div className='flex flex-wrap gap-2 mb-6'>
+                {project.tags.map((tag, tagIndex) => (
+                  <span key={tagIndex} className='px-3 py-1 rounded-lg text-xs font-semibold bg-white/5 border border-white/10 text-gray-300'>
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <div className='flex items-center gap-3'>
+                <a
+                  href={project.github}
+                  target='_blank'
+                  rel="noreferrer"
+                  className='flex-1 flex items-center justify-center gap-2 py-3.5 rounded-xl font-semibold text-xs sm:text-sm bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 text-white'
+                >
+                  <i className="fa-brands fa-github text-base"></i>
+                  GitHub
+                </a>
+
+                <a
+                  href={project.demo}
+                  target='_blank'
+                  rel="noreferrer"
+                  className='flex-1 flex items-center justify-center gap-2 py-3.5 rounded-xl font-semibold text-xs sm:text-sm bg-purple-400 text-white shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 hover:scale-[1.02] transition-all duration-300'
+                  style={{
+                    background: 'linear-gradient(90deg, #8245ec, #a855f7)',
+                    boxShadow: '0 0 2px #8245ec, 0 0 2px #8245ec, 0 0 40px #8245ec'
+                  }}
+                >
+                  <i className="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                  Live Demo
+                </a>
+              </div>
+            </div>
           </div>
+        ))}
 
-          
-
-        </div>
-
-        <div className='group rounded-xl border border-white/10 bg-white/4 backdrop-blur-xl p-6 transition-all duration-300 hover:-translate-y-3'>
-          
-        </div>
-
-        <div className='group rounded-xl border border-white/10 bg-white/4 backdrop-blur-xl p-6 transition-all duration-300 hover:-translate-y-3'>
-          
-        </div>
       </div>
     </section>
   )

@@ -42,14 +42,14 @@ const Skills = () => {
   const filteredData = activeTab === "All" ? skillsData : skillsData.filter(skill => skill.category === activeTab);
 
   return (
-    <section id='Skills' className='min-h-screen py-16 px-5 text-white sm:px-6 lg:px-10'>
+    <section id='Skills' className='min-h-screen py-18 px-5 text-white sm:px-6 lg:px-10'>
       {/* Header-part */}
       <div className="text-center mb-10">
-        <h2 className="text-xxl sm:text-2xl lg:text-3xl font-extrabold tracking-normal">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl uppercase font-extrabold tracking-normal">
           My Skills
         </h2>
         <div className="mt-3 h-1 w-14 mx-auto rounded-full bg-linear-to-r from-cyan-400 to-purple-500"></div>
-        <h3 className='mt-4 text-md sm:text-base font-medium text-gray-400'>Technologies I work with</h3>
+        <p className='mt-4 text-lg  font-semibold text-gray-400'>Technologies I work with</p>
       </div>
 
       {/* Filter-tabs */}
