@@ -20,20 +20,19 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      setScrolled(window.scrollY > 20);
 
       window.addEventListener("scroll", handleScroll);
-      return () => {
-        window.removeEventListener("scroll", handleScroll)
-      };
+      return () => window.removeEventListener("scroll", handleScroll);
     }
   }, [])
   return (
     <div>
-      <header className='fixed top-5 inset-x-4 z-50 max-w-7xl mx-auto'>
-        <nav className={`flex h-20 items-center justify-between rounded-2xl border border-white/10 px-4 sm:px-6 lg:px-8 transition-all duration-300 ${scrolled ? "bg-[#070B14]/80 backdrop-blur-xl shadow-lg shadow-cyan-500/10" : "bg-transparent"}`}>
+      <header className="fixed top-0 left-0 w-full z-50">
+        <nav className={`relative flex h-20 items-center px-8 lg:px-12 transition-all duration-300 ${scrolled
+          ? "bg-[#070B14]/90 backdrop-blur-xl border-b border-white/10 shadow-lg" : "bg-transparent"}`}>
 
-          <div className="group relative cursor-pointer whitespace-nowra font-mono text-base font-bold tracking-tight transition-all duration-300 sm:text-lg md:text-xl">
+          <div className="flex items-center group relative cursor-pointer whitespace-nowra font-mono text-base font-bold tracking-tight transition-all duration-300 sm:text-lg md:text-xl">
             {/* Glow effect on hover */}
             <div className="absolute -inset-x-3 -inset-y-2 rounded-lg bg-[#82456c]/10 opacity-0 blur-md transition-opacity duration-300 group-hover:opacity-100"></div>
 
@@ -62,8 +61,8 @@ const Navbar = () => {
           </div>
 
           {/* Menus */}
-          <ul className={`absolute top-20 left-0 right-0 mx-4 rounded-2xl border border-white/10 bg-[#070B14]/50 backdrop-blur-2xl shadow-[0_0_30px_rgba(34,211,238,0.08)] py-8 transition-all duration-300 ${sidebarOpen ? "flex flex-col items-center gap-8" : "hidden"} lg:static lg:flex lg:flex-row lg:items-center lg:gap-10 lg:w-auto lg:bg-transparent lg:backdrop-blur-none
-          lg:border-0 lg:shadow-none lg:py-0 lg:mx-0`}>
+          <ul
+            className={`absolute top-20 left-0 right-0 mx-4 rounded-2xl border border-white/10 bg-[#070B14]/70 backdrop-blur-2xl shadow-[0_0_30px_rgba(34,211,238,0.08)] py-8 transition-all duration-300 ${sidebarOpen ? "flex flex-col items-center gap-8" : "hidden"} lg:flex lg:absolute lg:top-1/2 lg:left-1/2 lg:right-auto lg:-translate-x-1/2 lg:-translate-y-1/2 lg:flex-row lg:items-center lg:gap-10 lg:mx-0 lg:py-0 lg:bg-transparent lg:backdrop-blur-none lg:border-0 lg:shadow-none`}>
 
             {menuItems.map((link) => {
               const isActive = active === link.href;
@@ -106,7 +105,7 @@ const Navbar = () => {
           </ul>
 
           {/* Right-part */}
-          <div className='hidden lg:flex items-center gap-4'>
+          <div className='ml-auto hidden lg:flex items-center gap-4'>
 
             {/* GitHub */}
             <a href="https://github.com/Nitin0259"
@@ -128,7 +127,7 @@ const Navbar = () => {
           {/* Mobile Hamburger */}
           <button
             onClick={() => setSidebarOpen(!sidebarOpen)}
-            className="flex lg:hidden h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-white"
+            className="ml-auto flex lg:hidden h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/5"
           >
             <i className={`fa-solid ${sidebarOpen ? "fa-xmark" : "fa-bars"} text-xl`} />
           </button>

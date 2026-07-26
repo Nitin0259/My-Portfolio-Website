@@ -6,25 +6,7 @@
     font-family: "Manrope", sans-serif;
 }
 
-.scroll-dot {
-  animation: scrollMove 1.5s ease-in-out infinite;
-}
-
-@keyframes scrollMove {
-  0% {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-  50% {
-    transform: translateY(12px);
-    opacity: 0.5;
-  }
-  100% {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
-
+/* Home page animation */
 @keyframes floating {
   0% {
     transform: translateY(0px);
@@ -60,4 +42,11 @@
 
 .skill-card:hover img {
   animation: float 1.5s ease-in-out infinite;
+}
+
+/*  */
+.typed-cursor {
+  color: white;
+  font-size: inherit;
+  font-weight: 400;
 }

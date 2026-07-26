@@ -62,7 +62,7 @@ const Contact = () => {
         </div>
 
         <div className='mt-16 flex justify-center'>
-          <div className='w-full max-w-md rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-8 shadow-xl'>
+          <div className='w-full max-w-md rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-4 lg:p-6 shadow-xl'>
 
             <h3 className='text-center text-xl font-bold text-white mb-6'>Connect With Me 🚀</h3>
 

@@ -15,7 +15,7 @@ const Home = () => {
         "Python Developer",
       ],
       typeSpeed: 80,
-      backSpeed: 50,
+      backSpeed: 60,
       loop: true,
     });
 
@@ -25,7 +25,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div id='#' className='min-h-screen flex items-center pt-28'>
+    <div id='Home' className='min-h-screen flex items-center pt-28'>
       <main className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-4'>
         <div className='flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-10'>
 
@@ -38,9 +38,9 @@ const Home = () => {
             </div>
 
             {/* Heading */}
-            <div className="space-y-4">
+            <div className="space-y-6">
 
-              <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold leading-tight text-white">
+              <h1 className="text-2xl sm:text-3xl lg:text-5xl font-semibold leading-snug text-white">
                 Hi, My name is{" "}
                 <span className="text-purple-400 ">
                   Nitin
