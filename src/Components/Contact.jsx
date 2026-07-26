@@ -4,17 +4,48 @@ import emailjs from '@emailjs/browser'
 
 const Contact = () => {
 
-  const [formData, setFormData] = useState(false)
+  const [formData, setFormData] = useState({
+    email: "",
+    name: "",
+    subject: "",
+    message: "",
+  })
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value,
+  });
+};
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm("service_u8nlzoq", "template_axlm2fy", form.current, "uyG3-0Sqosb4W-wzo")
-    .then(() => { 
-      setFormData(true);
-      form.current.reset();
-    })
-  }
+    emailjs
+      .send(
+        "service_u8nlzoq",
+        "template_axlm2fy",
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        },
+        "uyG3-0Sqosb4W-wzo"
+      )
+      .then(() => {
+        toast.success("Message sent successfully! ✅");
+
+        setFormData({
+          email: "",
+          name: "",
+          subject: "",
+          message: "",
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+        toast.error("Failed to send message ❌");
+      });
+  };
   return (
     <>
       <Toaster position="top-right" />
