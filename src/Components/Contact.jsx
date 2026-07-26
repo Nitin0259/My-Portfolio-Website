@@ -12,9 +12,10 @@ const Contact = () => {
   })
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value,
-  });
-};
+    setFormData({
+      ...formData, [e.target.name]: e.target.value,
+    });
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -32,7 +33,9 @@ const Contact = () => {
         "uyG3-0Sqosb4W-wzo"
       )
       .then(() => {
-        toast.success("Message sent successfully! ✅");
+        toast.success("Message sent successfully! ✅", {
+          duration: 2000,
+        });
 
         setFormData({
           email: "",
