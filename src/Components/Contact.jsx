@@ -52,7 +52,7 @@ const Contact = () => {
   return (
     <>
       <Toaster position="top-right" />
-      <section id='Contact' className='min-h-screen py-18 px-5 text-white sm:px-6 lg:px-10'>
+      <section id='Contact' className='min-h-[80vh] lg:min-h-screen py-18 px-5 text-white sm:px-6 lg:px-10'>
         <div className="text-center mb-10">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl uppercase font-extrabold tracking-normal">
             Contact

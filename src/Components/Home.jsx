@@ -25,7 +25,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div id='Home' className='min-h-screen flex items-center pt-28'>
+    <div id='#' className='min-h-[80vh] lg:min-h-screen flex items-center pt-28'>
       <main className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-4'>
         <div className='flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-10'>
 
