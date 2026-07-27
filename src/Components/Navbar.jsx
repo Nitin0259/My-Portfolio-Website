@@ -9,7 +9,7 @@ const Navbar = () => {
     { href: "#Contact", label: "Contact" }
   ]
 
-  const [active, setActive] = useState("#");
+  const [active, setActive] = useState("");
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
