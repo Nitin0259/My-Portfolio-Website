@@ -17,7 +17,7 @@ const Footer = () => {
 
                 <ul className='flex flex-wrap items-center justify-center gap-4 sm:gap-6'>
                     {[
-                        { name: "Home", id: "#" },
+                        { name: "Home", id: "Home" },
                         { name: "About", id: "About" },
                         { name: "Skills", id: "Skills" },
                         { name: "Projects", id: "Projects" },

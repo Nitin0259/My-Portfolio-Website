@@ -9,7 +9,7 @@ const Navbar = () => {
     { href: "#Contact", label: "Contact" }
   ]
 
-  const [active, setActive] = useState("");
+  const [active, setActive] = useState("#");
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -22,15 +22,33 @@ const Navbar = () => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
 
-      window.addEventListener("scroll", handleScroll);
-      return () => window.removeEventListener("scroll", handleScroll);
-    }
+      const sections = ["Home", "About", "Skills", "Projects", "Contact"];
+      const scrollPosition = window.scrollY + 200; // Offset for better triggering
+
+      for (let i = 0; i < sections.length; i++) {
+        const sectionId = sections[i];
+        const element = document.getElementById(sectionId === "Home" ? "Home" : sectionId);
+
+        if (element) {
+          const top = element.offsetTop;
+          const height = element.offsetHeight;
+
+          if (scrollPosition >= top && scrollPosition < top + height) {
+            setActive(sectionId === "Home" ? "#" : `#${sectionId}`);
+            break;
+          }
+        }
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [])
+
   return (
     <div>
       <header className="fixed top-0 left-0 w-full z-50">
         <nav className={`relative flex h-20 items-center px-8 lg:px-12 transition-all duration-300 ${scrolled
-          ? "bg-[#070B14]/90 backdrop-blur-xl border-b border-white/10 shadow-lg" : "bg-transparent"}`}>
+          ? "bg-[#070B14]/90 backdrop-blur-xl shadow-lg" : "bg-transparent"}`}>
 
           <div className="flex items-center group relative cursor-pointer whitespace-nowra font-mono text-base font-bold tracking-tight transition-all duration-300 sm:text-lg md:text-xl">
             {/* Glow effect on hover */}
