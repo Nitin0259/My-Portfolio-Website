@@ -7,13 +7,14 @@ const Projects = () => {
 
   const projectsData = [
     {
-      title: 'Student Management System',
-      description: 'A complete system to manage students, courses, and records efficiently.',
-      tags: ['HTML', 'Tailwind', 'Django', 'Python', 'MySQL'],
-      github: 'https://github.com/Nitin0259/Student-Management-System',
-      demo: 'https://student-management-system-8mzt.onrender.com',
+      title: 'Travel Booking Website',
+      description: 'A modern travel booking platform with destination browsing, trip planning, and secure booking features.',
+      tags: ['HTML', 'Tailwind', 'Javascript'],
+      github: 'https://github.com/Nitin0259/Travel-Booking-website',
+      demo: 'https://nitin0259.github.io/Travel-Booking-website/',
       image: project1,
     },
+
     {
       title: 'Agency AI',
       description: 'A responsive AI agency website featuring modern design, smooth animations, and service showcases.',
@@ -22,12 +23,13 @@ const Projects = () => {
       demo: 'https://nitin0259.github.io/Agency-AI-Project/',
       image: project2,
     },
+    
     {
-      title: 'Travel Booking Website',
-      description: 'A modern travel booking platform with destination browsing, trip planning, and secure booking features.',
-      tags: ['HTML', 'Tailwind', 'Javascript'],
-      github: 'https://github.com/Nitin0259/Travel-Booking-website',
-      demo: 'https://nitin0259.github.io/Travel-Booking-website/',
+      title: 'Student Management System',
+      description: 'A complete system to manage students, courses, and records efficiently.',
+      tags: ['HTML', 'Tailwind', 'Django', 'Python', 'MySQL'],
+      github: 'https://github.com/Nitin0259/Student-Management-System',
+      demo: 'https://student-management-system-8mzt.onrender.com',
       image: project3,
     },
   ]
