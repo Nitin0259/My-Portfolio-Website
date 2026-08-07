@@ -2,6 +2,7 @@ import React from 'react'
 import project1 from "../assets/Images/project-img1.png"
 import project2 from "../assets/Images/project-img2.png"
 import project3 from "../assets/Images/project-img3.png"
+import project4 from "../assets/Images/project-img4.png"
 
 const Projects = () => {
 
@@ -23,7 +24,7 @@ const Projects = () => {
       demo: 'https://nitin0259.github.io/Agency-AI-Project/',
       image: project2,
     },
-    
+
     {
       title: 'Student Management System',
       description: 'A complete system to manage students, courses, and records efficiently.',
@@ -31,6 +32,15 @@ const Projects = () => {
       github: 'https://github.com/Nitin0259/Student-Management-System',
       demo: 'https://student-management-system-8mzt.onrender.com',
       image: project3,
+    },
+
+    {
+      title: 'Linkly - URL Shortener',
+      description: 'A full-stack URL shortening platform that converts long URLs into short links with click tracking and QR code generation.',
+      tags: ['React', 'Tailwind CSS', 'Django', 'Python', 'REST API', 'MySQL'],
+      github: 'https://github.com/Nitin0259/URL-Shortener',
+      demo: 'https://url-shortener-rho-liart.vercel.app/Dashboard',
+      image: project4,
     },
   ]
   return (
