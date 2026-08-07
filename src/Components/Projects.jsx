@@ -39,7 +39,7 @@ const Projects = () => {
       description: 'A full-stack URL shortening platform that converts long URLs into short links with click tracking and QR code generation.',
       tags: ['React', 'Tailwind CSS', 'Django', 'Python', 'REST API', 'MySQL'],
       github: 'https://github.com/Nitin0259/URL-Shortener',
-      demo: 'https://url-shortener-rho-liart.vercel.app/Dashboard',
+      demo: 'https://url-shortener-rho-liart.vercel.app',
       image: project4,
     },
   ]
